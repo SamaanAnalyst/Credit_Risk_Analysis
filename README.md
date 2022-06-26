@@ -77,6 +77,22 @@ loan amount, interest rate, home ownership, annual income, demographics, payment
 ![Results of Logistic Regression on SMOTE Oversampled Credit Card Loan Applications.]('./Images/SMOTE_report.png')
 
 
+- Next, We test an undersampling algorithm to determine which algorithm results in the best performance compared to the oversampling algorithms above.
+- We will undersample the data using the Cluster Centroids algorithm. 
+- We fit the Cluster Centroids resampler to the same credit card loans dataset and count the target classes that result from the algorithm: 
+{'high_risk': 246, 'low_risk': 246}.
+-- The accuracy score of the logistic regression model used to predict the risk of credit card loan applications based on Cluster Centroids Undersampling technique was only 55%.
+-- While precision in predicting the majority goup of low risk application is still at 100%, all other metrics like sensitivity and the F1-score are compromised with undersampling of the credit card loans data,
+espicially in predicting the high risk loan applications. 
+-- The classification report for Cluster Centroids Undersampling is as follows: 
+![Results of Logistic Regression on Undersampled Loans Data Using Cluster Centroids Algorithm.](./Images/ClusterCentroids_report.png)
+
+  
+    
+    
+    
+    
+    
 
 
 ## Recommendations & Limitations
