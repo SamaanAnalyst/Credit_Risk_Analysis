@@ -92,9 +92,16 @@ Finally, we will evaluate the performance of these models and give recommendatio
         - While precision in predicting the majority group of low-risk applications is still at 100%, other metrics like sensitivity and the F1 score are compromised by undersampling the credit card loans data, especially in predicting the high-risk loan applications. 
         - The classification report for Cluster Centroids Undersampling is as follows: 
         
-        ![Results of Logistic Regression on Undersampled Loans Data Using Cluster Centroids Algorithm.](./Images/ClusterCentroids_report.png)
-
-  
+        ![Results of Logistic Regression on Undersampled Loans Data Using Cluster Centroids Algorithm.](./Images/ClusterCentroids_report.png) <br>
+    
+    - The Combination (Over and Under) Sampling, SMOTEENN, balanced the credit card dataset as follows: {'high_risk': 68458, 'low_risk': 62022}.
+        - The accuracy score of the logistic regression model used to predict the risk of credit card loan applications based on the SMOTEENN resampling technique was the highest among all previous models, with 67%. 
+        - While precision for predicting low-risk loans is 100%, the sensitivity was 57%. 
+        - The most impressive about this resampling algorithm was the sensitivity rate in detecting high-risk loan applications with 77%, which indicates the lowest false-negative predictions, even though precision was only 1%. 
+    
+       - The classification report for the SMOTEENN model is as follows: 
+        
+        ![Results of Logistic Regression on Combination Resampled Credit Card Data with SMOTEENN.](./Images/SMOTEENN_report.png)
     
     
     
@@ -104,7 +111,7 @@ Finally, we will evaluate the performance of these models and give recommendatio
 
 ## Recommendations & Limitations
 
-    
+1. Among the following Machine Learning models for resampling data: Naive Random Oversampling, Synthetic Minority Oversampling Technique (SMOTE), Cluster Centroids Undersampling, and SMOTEENN (combines SMOTE and Edited Nearest Neighbors (ENN) algorithms) for combination resampling, the latest has shown the highest screening power for high-risk credit card loan applications.
     
     
     
