@@ -76,7 +76,7 @@ The logistic regression model using the resample data gave such predictions: <br
 The accuracy of the logistic regression model used to predict the risk of credit card loan applications based on Random Oversampling technique was only 66%. <br>
 The classification report would show us that while precision is very high (100%) for the majority class of low risk applications, <br>
 precision in predicting high risk applications is extremely low (1%) which indicates high number of false positives meaning an unreliable positive classification. <br>
-However, the recall (sensitivity) is 60% and 70% for low-risk and high-risk applications, respectively. <br>
+However, the recall (sensitivity) is 60% and 72% for low-risk and high-risk applications, respectively. <br>
 It seems that the logistic regression model using the Random Oversampling technique was better in screening for high risk loan applications.<br>
 
 ![Results of Logistic Regression on Randomly Oversampled Credit Card Loan Applications.](./Images/oversampling_report.png)<br>
