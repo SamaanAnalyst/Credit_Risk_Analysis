@@ -36,7 +36,7 @@ Finally, we will evaluate the performance of these models and give recommendatio
 - Data Sources: LoanStats_2019Q1.csv, credit_risk_resampling.ipynb, credit_risk_ensemble.ipynb.
 - Software & Frameworks: Python (3.7).
 - Libraries & Packages: Jupyter Notebook, NumPy (1.21.5), Scipy (1.7.3), Scikit-learn (1.0.2) for Over- and Under-sampling algorithms, Scikit-learn (0.23.2) for Ensemble Learning, imbalanced-learn library (0.7.0).
-- Online Tools: Credit_Risk_Analysis GitHub repository.
+- Online Tools: [Credit_Risk_Analysis GitHub repository.](https://github.com/Magzzie/Credit_Risk_Analysis)
 
 
 ## Methods & Code
@@ -95,14 +95,14 @@ Finally, we will evaluate the performance of these models and give recommendatio
         - The classification report would show us that while precision was very high (100%) for the majority class of low-risk applications, precision in predicting high-risk applications was deficient (1%), which indicated a high number of false positives meaning an unreliable positive classification. <br>
         - However, the recall (sensitivity) was 64% and 71% for low-risk and high-risk applications, respectively. <br>
         - It seems that the logistic regression model using the Random Oversampling technique better screened for high-risk loan applications.<br>
-        - The classification report for Random Oversampling was as follows:
+        - The classification report for Random Oversampling was as follows:<br>
     
         ![Results of Logistic Regression on Randomly Oversampled Credit Card Loan Applications.](./Images/oversampling_report.png)<br>
     
     - The **Synthetic Minority Oversampling Technique** or **SMOTE** balanced the loans dataset in the same way as the previous model {'low_risk': 51366, 'high_risk': 51366}.<br>
         - The confusion matrix results of the logistic regression model in this instance were very close to the Random Oversampling technique. <br>
         - The accuracy of the logistic regression model used to predict the risk of credit card loan applications based on the Random Oversampling technique was 66%.
-        - The classification report for SMOTE was as follows:
+        - The classification report for SMOTE was as follows:<br>
     
         ![Results of Logistic Regression on SMOTE Oversampled Credit Card Loan Applications.](./Images/SMOTE_report.png)<br>
     
@@ -110,7 +110,7 @@ Finally, we will evaluate the performance of these models and give recommendatio
         - The accuracy score of the logistic regression model used to predict the risk of credit card loan applications based on the Cluster Centroids Undersampling technique was only 55%.
         - While precision in predicting the majority group of low-risk applications was still at 100%, other metrics like the recall rate were compromised by undersampling. 
         - The sensitivity for detecting high-risk applications was close to the previous Random oversampling model with 69%, but the F1 score remained very low.
-        - The classification report for Cluster Centroids Undersampling was as follows: 
+        - The classification report for Cluster Centroids Undersampling was as follows: <br>
         
         ![Results of Logistic Regression on Undersampled Loans Data Using Cluster Centroids Algorithm.](./Images/ClusterCentroids_report.png) <br>
     
@@ -118,28 +118,30 @@ Finally, we will evaluate the performance of these models and give recommendatio
     - The accuracy score of the logistic regression model used to predict the risk of credit card loan applications based on the SMOTEENN resampling technique was the highest among all previous models, with 67%. 
     - While precision for predicting low-risk loans is 100%, the sensitivity was 57%. 
     - The most impressive about this resampling algorithm was the sensitivity rate in detecting high-risk loan applications with 77%, which indicates the lowest false-negative predictions, even though precision was only 1%.     
-    - The classification report for the SMOTEENN model is as follows: 
+    - The classification report for the SMOTEENN model was as follows: <br>
         
-    ![Results of Logistic Regression on Combination Resampled Credit Card Data with SMOTEENN.](./Images/SMOTEENN_report.png)
+    ![Results of Logistic Regression on Combination Resampled Credit Card Data with SMOTEENN.](./Images/SMOTEENN_report.png)<br>
     
 3. We used Ensemble algorithms to assess credit card loan risk and compared them to the abovementioned oversampling and undersampling techniques. 
     - First, we trained the Balanced Random Forest classifier on the same credit card loans preprocessed dataset and made predictions. 
         - The accuracy score of this classifier's predictions was 79%. 
         - This ensemble algorithm showed high sensitivity in detecting both low and high-risk loan applications with 87% and 70%, respectively. 
         - However, the precision of predictions was incomparable between the two classes, with 100% for low-risk and only 3% for high-risk applications. 
-        - The top feature that influenced the prediction of risk in credit card loan applications was the total recommended principle of the applicant, as shown in the following image of the top 10 features per importance: 
-        ![Top 10 Important Features by the Balance Random Forest Classifier.](./Images/top10_features_brf.png)
-        - The classification report for the Balanced Random Forest classifier is as follows: 
+        - The top feature that influenced the prediction of risk in credit card loan applications was the total recommended principle of the applicant, as shown in the following image of the top 10 features per importance: <br>
     
-        ![Results of the Resampled Credit Card Data with Balanced Random Forest Classifier.](./Images/balancedrandomforest_report.png)
+        ![Top 10 Important Features by the Balance Random Forest Classifier.](./Images/top10_features_brf.png)<br>
+    
+        - The classification report for the Balanced Random Forest classifier was as follows: <br>
+    
+        ![Results of the Resampled Credit Card Data with Balanced Random Forest Classifier.](./Images/balancedrandomforest_report.png)<br>
  
     - Second, we used the Easy Ensemble AdaBoost classifier to determine the risk on the same dataset:
         - The accuracy score of this algorithm was the highest among all applied techniques in this analysis, at 93%. 
         - The sensitivity in predicting both classes of risk was comparable with 92% for high-risk and 94% for low-risk, which indicated the lowest number of false negatives (false high-risk predictions) and impressive specificity for both classes. 
         - The precision of high-risk predictions was superior to all other machine learning models, with 9% and 100% for low-risk applications. 
-        - The classification report for the Easy Ensemble AdaBoost classifier is as follows:
+        - The classification report for the Easy Ensemble AdaBoost classifier was as follows:<br>
     
-        ![Results of the Resampled Credit Card Data with Easy Ensemble AdaBoost Classifier.](./Images/easyensemble_report.png)
+        ![Results of the Resampled Credit Card Data with Easy Ensemble AdaBoost Classifier.](./Images/easyensemble_report.png) <br>
     
     - It is worth noting how highly efficient the ensemble learning algorithms were in achieving the task with a reduced number of coding steps and processing time.  
 
